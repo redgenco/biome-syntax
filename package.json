@@ -10,7 +10,7 @@
     "two-tone",
     "biome"
   ],
-  "repository": "https://github.com/atom/biome-syntax",
+  "repository": "https://github.com/redgenco/biome-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
