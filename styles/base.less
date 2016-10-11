@@ -1,0 +1,329 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: white;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+  color: @syntax-text-color-dark;
+  // border: 1px solid @dark-blue;
+  background-color: @dark-blue;
+}
+
+.keyword {
+  color: @syntax-text-color; // "using System.Collections;"
+
+  &.control {
+    color: @syntax-text-color-dark;
+  }
+
+  &.operator {
+    color: @syntax-text-color; // Signs like "=" and ":"
+  }
+
+  &.other.special-method {
+    color: @syntax-text-color-dark; // Was dark-blue
+  }
+
+  &.other.unit {
+    color: @orange;
+  }
+}
+
+.storage {
+  color: @syntax-text-color-dark; // C# class declaration type (void, public etc)
+}
+
+.constant {
+  color: @orange;
+
+  &.character.escape {
+    color: @syntax-text-color-dark;
+  }
+
+  &.numeric {
+    color: @orange; // C# Ints etc
+  }
+
+  &.other.color {
+    color: @syntax-text-color-dark;
+  }
+
+  &.other.symbol {
+    color: @syntax-text-color-dark; //?
+  }
+}
+
+.variable {
+  color: @syntax-text-color; // All variables
+  // text-decoration: underline;
+  background-color: rgba(256, 256, 256, 0.1);
+
+  &.interpolation {
+    color: darken(@orange, 10%);
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+    background-color: rgba(256, 256, 256, 0.2);
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-text-color;
+}
+
+.string {
+  color: @syntax-text-color; // String
+  // background-color: rgba(256, 256, 256, 0.1);
+
+  &.regexp {
+    color: @syntax-text-color-dark;
+
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+
+  &.other.link {
+    color: @syntax-text-color-dark;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @syntax-text-color-dark; // "//"
+      background-color: @dark-blue;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @syntax-text-color-dark;
+    }
+
+    &.heading,
+    &.identity {
+      color: @syntax-text-color-dark; // Was dark-blue
+    }
+
+    &.bold {
+      color: @orange; //?
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @orange; //?
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @syntax-text-color-dark; //PHP open + closing
+  }
+
+}
+
+.support {
+  &.class {
+    color: @syntax-text-color-dark; // Was dark-blue
+  }
+
+  &.function  {
+    color: @syntax-text-color-dark;
+
+    &.any-method {
+      color: @syntax-text-color-dark; // Was dark-blue
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: @syntax-text-color;
+    // background-color: @dark-blue;
+  }
+  &.name.type {
+    color: @orange; //?
+    text-decoration: underline;
+  }
+
+  &.other.inherited-class {
+    color: @syntax-text-color-dark;
+  }
+  &.name.class, &.name.type.class {
+    color: @syntax-text-color-dark; // Class name
+  }
+
+  &.name.section {
+    color: @syntax-text-color-dark;
+  }
+
+  &.name.tag { // HTML & CSS Tags
+    color: @syntax-text-color;
+    background-color: rgba(256, 256, 256, 0.2);
+  }
+
+  &.other.attribute-name {
+    color: @orange; //HTML "href"/"name"/"charset" etc
+
+    &.id {
+      color: @orange; //HTML "id"
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @syntax-text-color; // Essentially all C# text
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @syntax-text-color-dark;
+  }
+
+  &.selector {
+    color: @syntax-text-color-dark; // Brackets and commas
+  }
+
+  &.separator {
+    background-color: @gray;
+    color: @syntax-text-color-dark; //?
+  }
+}
+
+.none {
+  color: @syntax-text-color-dark; //?
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @syntax-text-color-dark;
+  }
+
+  &.deleted {
+    color: @syntax-text-color-dark;
+  }
+
+  &.italic {
+    color: @syntax-text-color-dark;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @syntax-text-color-dark; // Was dark-blue
+  }
+
+  &.inserted {
+    color: @syntax-text-color-dark;
+  }
+
+  &.list {
+    color: @orange; //?
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @syntax-text-color-dark;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @syntax-text-color-dark;
+  }
+}
+
+// MINIMAP COLORING
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
+
+atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area::after,
+atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area::after {
+  background-color: rgba(255 , 255, 255, 0.25);
+}
+
+// BRACKET MATCHER
+
+.bracket-matcher {
+    border-bottom: none;
+    position: absolute;
+    background-color: @biome-faint;
+}
