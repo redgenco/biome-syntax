@@ -2,10 +2,13 @@
   "name": "biome-syntax",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "description": "A vibrant two-toned syntax theme for Atom.",
   "keywords": [
     "syntax",
-    "theme"
+    "downwell",
+    "blue",
+    "two-tone",
+    "biome"
   ],
   "repository": "https://github.com/atom/biome-syntax",
   "license": "MIT",

@@ -1,5 +1,9 @@
 # biome-syntax theme
 
-A short description of your theme.
+![Biome Title] (http://i.imgur.com/Tbf4wUF.png)
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+A vibrant two-toned syntax theme for Atom. Inspired by Downwell.
+
+![HTML Preview](http://i.imgur.com/AZUzSTN.png)
+![CSS Preview](http://i.imgur.com/XxUMkG8.png)
+![CS Preview](http://i.imgur.com/pH5XEOR.png)
