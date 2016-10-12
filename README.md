@@ -1,7 +1,7 @@
 # biome-syntax theme
 ## A vibrant two-toned syntax theme for Atom. Inspired by *Downwell*.
 
-![Biome Title] (http://i.imgur.com/Tbf4wUF.png)
+![Biome Title] (http://i.imgur.com/q6W2lhT.png)
 
 ---
 # HTML
