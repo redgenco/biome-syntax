@@ -323,7 +323,10 @@ atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area:
 // BRACKET MATCHER
 
 .bracket-matcher {
-    border-bottom: none;
     position: absolute;
     background-color: @biome-faint;
+}
+
+atom-text-editor::shadow  .bracket-matcher .region {
+    border-bottom: none;
 }
