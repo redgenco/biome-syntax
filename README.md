@@ -15,3 +15,5 @@ A vibrant two-toned syntax theme for Atom.
 ### CS
 ![CS Preview](http://i.imgur.com/nty8wDc.png)
 ---
+
+[white-cursor] (https://atom.io/packages/white-cursor) package recommended.
